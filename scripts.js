@@ -7,4 +7,14 @@ function gridGenerator(number){
       .repeat(n).replace(/X/g,_=> (i++).toString(n) )
   }
   
-  gridGenerator(5);
+var slider = document.getElementById("myRange");
+var output = document.getElementById("slidervalue");
+output.innerHTML = slider.value; //display the default slider value
+
+// update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+    gridGenerator(this.value);
+}
+
+gridGenerator(5);
