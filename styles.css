@@ -1,15 +1,18 @@
-.content {
+.row {
+    font-size: 9.5px;
+    color: red;
+  }
+  
+  .cell {
+    width: 25px;
+    height: 25px;
+    margin: 1px;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: auto;
-    background-color: pink;
-    width: 500px;
-    height: 500px;
-}
-
-#grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-}
+  }
+  
+  .container {
+    display: flex;
+    flex-w

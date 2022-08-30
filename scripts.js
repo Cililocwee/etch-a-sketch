@@ -1,13 +1,10 @@
-const content = document.querySelector('#content');
-
-const div = document.createElement('div');
-div.setAttribute('style', 'background-color:blue;height:90px;width:90px;');
-
-content.appendChild(div);
-
-var container = document.getElementById("grid-container");
-var cell = document.createElement("div");
-cell.innerHTML = "TEXT";
-for (let i = 0; i < 9; i++){
-    container.appendChild(cell);
-}
+function gridGenerator(number){  
+    let i = 0;
+    let n = number;
+  
+    container.innerHTML = 
+      `<div class="row">${'<div class="cell">X</div>'.repeat(n)}</div>`
+      .repeat(n).replace(/X/g,_=> (i++).toString(n) )
+  }
+  
+  gridGenerator(5);
